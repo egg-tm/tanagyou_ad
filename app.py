@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # タイトル
-st.title("CSVデータの絞り込みアプリ")
+st.title("令和7年 棚経 住所検索")
 
 # 事前に決まったCSVファイルを読み込む
 DATA_FILE = "tanagyou_address.csv"  # ファイル名を指定
