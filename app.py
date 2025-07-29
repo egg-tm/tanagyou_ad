@@ -15,12 +15,16 @@ st.dataframe(df)
 st.sidebar.header("絞り込み条件")
 
 filters = {}
+
+
+
 for col in df.columns:
     if df[col].dtype == 'object':  # 文字列カラム
         options = df[col].dropna().unique()
         selected = st.sidebar.multiselect(f"{col} を選択", options)
         if selected:
             filters[col] = selected
+
     else:  # 数値カラム
         clean_col = df[col].dropna()
         if not clean_col.empty:
